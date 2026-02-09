@@ -3,73 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Professional Portfolio</title>
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-img {
+            transition: transform 0.2s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-gray-800">
 
     <!-- Hero Section -->
-    <section class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url('your-profile-image-url');">
-        <div class="bg-black bg-opacity-50 p-10 rounded-lg text-white">
-            <h1 class="text-4xl font-bold">Welcome to My Portfolio</h1>
-            <p class="mt-4">I'm a passionate developer.</p>
+    <section class="flex items-center justify-center h-screen bg-blue-600 text-white text-center fade-in">
+        <div>
+            <h1 class="text-5xl font-bold">Welcome to My Portfolio</h1>
+            <p class="mt-4 text-lg">I'm a passionate Developer.</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white fade-in">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold">About Me</h2>
-            <p class="mt-4 px-4">A brief introduction about my background and skills...</p>
+            <h2 class="text-4xl font-bold">About Me</h2>
+            <p class="mt-4">This is a brief introduction about myself...</p>
         </div>
     </section>
 
     <!-- Struggles Section -->
-    <section class="py-20 bg-gray-200">
+    <section class="py-20 bg-gray-200 fade-in">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold">My Struggles</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="font-bold">Struggle 1</h3>
-                    <p>Description of struggle 1...</p>
+            <h2 class="text-4xl font-bold">My Struggles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                <div class="card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-medium">Struggle 1</h3>
+                    <p>Description of Struggle 1...</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="font-bold">Struggle 2</h3>
-                    <p>Description of struggle 2...</p>
+                <div class="card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-medium">Struggle 2</h3>
+                    <p>Description of Struggle 2...</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="font-bold">Struggle 3</h3>
-                    <p>Description of struggle 3...</p>
+                <div class="card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-medium">Struggle 3</h3>
+                    <p>Description of Struggle 3...</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white fade-in">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold">Gallery</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-                <img src="image-url-1" alt="Gallery Image 1" class="rounded-lg shadow-lg">
-                <img src="image-url-2" alt="Gallery Image 2" class="rounded-lg shadow-lg">
-                <img src="image-url-3" alt="Gallery Image 3" class="rounded-lg shadow-lg">
-                <img src="image-url-4" alt="Gallery Image 4" class="rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+                <img src="image1.jpg" alt="Gallery Image 1" class="gallery-img rounded-lg w-full h-auto"/>
+                <img src="image2.jpg" alt="Gallery Image 2" class="gallery-img rounded-lg w-full h-auto"/>
+                <img src="image3.jpg" alt="Gallery Image 3" class="gallery-img rounded-lg w-full h-auto"/>
+                <img src="image4.jpg" alt="Gallery Image 4" class="gallery-img rounded-lg w-full h-auto"/>
+                <img src="image5.jpg" alt="Gallery Image 5" class="gallery-img rounded-lg w-full h-auto"/>
+                <img src="image6.jpg" alt="Gallery Image 6" class="gallery-img rounded-lg w-full h-auto"/>
             </div>
         </div>
     </section>
 
-    <!-- Support Section -->
-    <section class="py-20 bg-gray-200">
+    <!-- Support USDT Section -->
+    <section class="py-20 bg-gray-200 fade-in">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold">Support Me</h2>
-            <img src="your-usdt-qr-code-url" alt="USDT QR Code" class="mx-auto mt-4">
+            <h2 class="text-4xl font-bold">Support Me with USDT</h2>
+            <div class="mt-4">
+                <p class="mb-4">Wallet Address: <span id="walletAddress">your_wallet_address_here</span></p>
+                <button onclick="copyAddress()" class="px-4 py-2 bg-blue-600 text-white rounded">Copy Address</button>
+            </div>
+            <img src="your_qr_code_image.png" alt="QR Code" class="mt-4 mx-auto w-32 h-32"/>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-gray-800 text-white text-center">
-        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
     </footer>
-    
+
+    <script>
+        function copyAddress() {
+            const address = document.getElementById('walletAddress').innerText;
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Wallet address copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
