@@ -1,1 +1,75 @@
-<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Professional Portfolio</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n    <style>\n        body {\n            scroll-behavior: smooth;\n        }\n        .hero {\n            background-image: url('profile-image.jpg');\n            background-size: cover;\n        }\n    </style>\n</head>\n<body class=\"bg-gray-100\">\n    <header class=\"hero h-screen flex items-center justify-center text-white\">\n        <h1 class=\"text-5xl font-bold\">Welcome to My Portfolio</h1>\n    </header>\n    <section id=\"about\" class=\"py-20\">\n        <div class=\"container mx-auto\">\n            <h2 class=\"text-3xl font-bold text-center\">About Me</h2>\n            <p class=\"mt-4 text-center max-w-2xl mx-auto\">My journey as a developer...</p>\n        </div>\n    </section>\n    <section id=\"struggles\" class=\"py-20 bg-gray-200\">\n        <div class=\"container mx-auto\">\n            <h2 class=\"text-3xl font-bold text-center\">My Struggles</h2>\n            <p class=\"mt-4 text-center max-w-2xl mx-auto\">The challenges I faced...</p>\n        </div>\n    </section>\n    <section id=\"gallery\" class=\"py-20\">\n        <div class=\"container mx-auto\">\n            <h2 class=\"text-3xl font-bold text-center\">Gallery</h2>\n            <div class=\"grid grid-cols-1 md:grid-cols-3 gap-4 mt-4\">\n                <img src=\"image1.jpg\" alt=\"Gallery Image 1\" class=\"w-full h-48 object-cover\">\n                <img src=\"image2.jpg\" alt=\"Gallery Image 2\" class=\"w-full h-48 object-cover\">\n                <img src=\"image3.jpg\" alt=\"Gallery Image 3\" class=\"w-full h-48 object-cover\">\n                <!-- Add more images as needed -->\n            </div>\n        </div>\n    </section>\n    <section id=\"support\" class=\"py-20 bg-gray-200\">\n        <div class=\"container mx-auto\">\n            <h2 class=\"text-3xl font-bold text-center\">Support</h2>\n            <p class=\"mt-4 text-center\">Scan to support with USDT:</p>\n            <img src=\"usdt-qr-code.png\" alt=\"USDT QR Code\" class=\"mx-auto w-48 h-48\">\n        </div>\n    </section>\n    <footer class=\"py-10\">\n        <div class=\"container mx-auto text-center\">\n            <p>&copy; 2026 My Professional Portfolio</p>\n        </div>\n    </footer>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Professional Portfolio</title>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url('your-profile-image-url');">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg text-white">
+            <h1 class="text-4xl font-bold">Welcome to My Portfolio</h1>
+            <p class="mt-4">I'm a passionate developer.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">About Me</h2>
+            <p class="mt-4 px-4">A brief introduction about my background and skills...</p>
+        </div>
+    </section>
+
+    <!-- Struggles Section -->
+    <section class="py-20 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">My Struggles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold">Struggle 1</h3>
+                    <p>Description of struggle 1...</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold">Struggle 2</h3>
+                    <p>Description of struggle 2...</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold">Struggle 3</h3>
+                    <p>Description of struggle 3...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                <img src="image-url-1" alt="Gallery Image 1" class="rounded-lg shadow-lg">
+                <img src="image-url-2" alt="Gallery Image 2" class="rounded-lg shadow-lg">
+                <img src="image-url-3" alt="Gallery Image 3" class="rounded-lg shadow-lg">
+                <img src="image-url-4" alt="Gallery Image 4" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-20 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">Support Me</h2>
+            <img src="your-usdt-qr-code-url" alt="USDT QR Code" class="mx-auto mt-4">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-gray-800 text-white text-center">
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
